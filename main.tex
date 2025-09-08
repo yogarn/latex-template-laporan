@@ -1,0 +1,42 @@
+\documentclass[12pt,a4paper]{report}
+
+% Packages
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{setspace}
+\usepackage{tocloft}
+\usepackage{geometry}
+\usepackage{hyperref}
+\usepackage{fontspec}
+\usepackage[indonesian]{babel}
+
+\setmainfont{Times New Roman}
+
+
+% Page setup
+\geometry{margin=1in}
+\setstretch{1.5}
+
+% Bibliography style
+\renewcommand{\bibname}{Daftar Pustaka}
+\bibliographystyle{ieeetr}
+
+\begin{document}
+
+% Cover page
+\input{cover}
+\newpage
+
+% Table of contents
+\renewcommand{\contentsname}{Daftar Isi}
+\tableofcontents
+\newpage
+
+% Content (chapters)
+\input{chapters/intro}
+
+% Bibliography
+\newpage
+\bibliography{references}
+
+\end{document}
