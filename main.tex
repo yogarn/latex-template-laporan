@@ -8,8 +8,9 @@
 \usepackage{geometry}
 \usepackage{hyperref}
 \usepackage{fontspec}
-\usepackage[indonesian]{babel}
+\usepackage[indonesian]{babel}  % indonesian chapters
 
+% Code block
 \usepackage{minted}
 \setminted{
   frame=lines,
@@ -19,20 +20,13 @@
   linenos
 }
 
-% Spacing
-\usepackage{setspace}
-\onehalfspacing
-\setlength{\parskip}{1em}
-
-\setmainfont{Times New Roman}
-
 % Page setup
-\geometry{margin=1in}
-\setstretch{1.5}
+\usepackage{setspace}
 
-% Bibliography style
-\renewcommand{\bibname}{Daftar Pustaka}
-\bibliographystyle{ieeetr}
+\geometry{margin=1in}
+\setstretch{1.5}                % intra-paragraph spacing
+\setlength{\parskip}{1em}       % inter-paragraph spacing
+\setmainfont{Times New Roman}   % font configuration
 
 \begin{document}
 
@@ -50,6 +44,8 @@
 
 % Bibliography
 \newpage
+\renewcommand{\bibname}{Daftar Pustaka}
+\bibliographystyle{ieeetr}      % reference style, e.g., ieeetr, apalike, etc
 \bibliography{references}
 
 \end{document}
